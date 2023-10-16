@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY DETAILS</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
+<link href={"https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap " rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' %}" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <header>
+    <section class="navsection" >
+        <div class="logo">
+            <h1>Muhammed shahin technical</h1>
+        </div>
+        <nav >
+
+            <!-- <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars" ></i>
+            </label> -->
+
+
+
+           
+             <a href="#">Home</a>
+             <a href="#" >courses</a>
+            {% if user.is_authenticated %}
+            hello {{user.username}}
+            <a href=" {% url 'credential:logout' %}">logout</a>
+            {% else %}
+             <a href="{% url 'credential:registration' %}">register</a>
+             <a href="{% url 'credential:login' %}">login</a>
+            {% endif %}
+
+        
+            
+        
+        </nav>
+
+
+        <section></section>
+    </section>
+    <main id="m">
+        <div class="leftside">
+            <h3>hello</h3>
+            <h1>iam muhammed shahin kc</h1>
+            <h2>web developer</h2>
+
+            <a class="btn1" href="https://docs.google.com/forms/d/e/1FAIpQLSdbSsi2h_akT_7NeLE6boTuy7fYh-bpoMENImL8CZuTk1DTCw/viewform?usp=sf_link" >Hire me</a>
+
+
+
+             <a class="btn2" href="tel:+971507286676">Contact Me</a>
+
+        </div>
+        <div class="rightside">
+            <img src="{% static 'image/cartoon.webp' %}" alt="">
+
+        </div>
+    </main>
+</header>
+
+
+
+<!-- -----------course-------- -->
+
+<section class="course" id="c">
+    <h3>
+        My internships are.....
+    </h3>
+    
+    <div class="row">
+        <div class="course-col">
+            <h3>python web development </h3>
+            <p>Familiar with HTML, JavaScript and Bootstrap <br>
+                Familiar with OOPs <br>
+                Knowledge of SQL <br> 
+                project experience in web development <br>
+                Knowledge of Python, Angular, and Django <br>
+                Familiar with GIT
+                </p>
+
+        </div>
+        <div class="course-col">
+            <h3>ccna / mcse</h3>
+            <p>system administration <br>
+            routing and switching <br>
+        networking and hardwaring <br>server installation <br>firewall configuration</p>
+
+        </div>
+        <div class="course-col">
+            <h3>tally / g-basic</h3>
+            <p>purchace <br>sale <br>purchace return <br>sales return <br>word,excel,power point</p>
+
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- --------gallery--------- -->
+<section class="campus" id="g">
+    <h1>MY Pictures</h1>
+   
+    <div class="row">
+        <div class="campus-col">
+            <img src="{%static 'image/old.jpg ' %}" >
+            <div class="layer">
+                <h3>Old Photo</h3>
+            </div>
+
+        </div>
+
+        <div class="campus-col">
+            <img class="s" src=" {%static 'image/cv.png' %}" >
+            <div class="layer">
+                <h3>Cv</h3>
+            </div>
+
+        </div>
+
+
+        <div class="campus-col">
+            <img class="s" src="{%static 'image/new.jpg' %}" >
+            <div class="layer">
+                <h3>New Photo</h3>
+            </div>
+
+        </div>
+       
+
+
+
+</section>
+
+
+<!-- ------about-------- -->
+<div class="container">
+
+    <section class="footer" id="f">
+        <h4>About Me</h4>
+        <p>Dedicated and Passionate Computer Science graduate with a strong foundation in Software
+            Development . Strong analytical and problem solving skills and ability to learn new technologies
+            quickly. Self motivated and passionate about Software Development, eager to start my career in
+            this field and make an impact.
+            </p>
+        <div class="icon" id="ic">
+            
+            
+            <a class="fa fa-facebook"  href="https://www.facebook.com/"></a>
+            <a class="fa fa-twitter" href="https://twitter.com/home"></a>
+            <a class="fa fa-instagram" href="https://www.instagram.com/"></a>
+            <a class="fa fa-linkedin" href="https://www.linkedin.com/feed/"></a>
+           
+
+        </div>
+        <p>YOU CAN CONTACT-0507286676,Al nahda,Dubai,Uae</p>
+        <p>Developed by shahin</p>
+
+    </section>
+</div>
+
+
+
+</body>
+</html>
